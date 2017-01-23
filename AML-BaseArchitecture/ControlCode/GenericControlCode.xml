@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?--
+/*******************************************************************************
+ * Copyright (c) 2014,2017 fortiss GmbH.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Benjamin Brandenbourger (fortiss GmbH) - initial API and implementation and/or initial documentation
+ *    Milan Vathoopan (fortiss GmbH) - adaptations
+ *******************************************************************************/
+-->
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="" productName="CODESYS" productVersion="CODESYS V3.5 SP8 Patch 1" creationDateTime="2016-06-06T08:34:34.7832235" />
+  <contentHeader name="Fortiss_Components" version="1.0.0.0" modificationDateTime="2016-03-31T15:23:04.6918508" organization="OPAKConsortium">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation>
+          <property name="Author" type="string" />
+          <property name="Company" type="string">OPAK</property>
+          <property name="DefaultNamespace" type="string">FORTISS</property>
+          <property name="Description" type="string" />
+          <property name="DocFormat" type="string">reStructuredText</property>
+          <property name="IsEndUserLibrary" type="boolean">false</property>
+          <property name="LibraryCategories" type="unknown" />
+          <property name="LibraryCategoryIds" type="unknown" />
+          <property name="Project" type="string">GenericLinearDrive</property>
+          <property name="Released" type="boolean">false</property>
+          <property name="Title" type="string">GenericComponents</property>
+          <property name="Version" type="version">1.0.0.0</property>
+          <property name="library-category-list" type="library-category-list">Application|Composer</property>
+        </ProjectInformation>
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="GenericLinearDrivewihoutFB" pouType="functionBlock" globalID="POU_Skill1">
+        <interface>
+          <inputVars>
+            <variable>
+			 <outputVars>
+            <variable globalID= "Var_xxx1" name="ActuatorOUT_OWV">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </outputVars>
+			</variable>
+		  </inputVars>
+		</interface>
+			<addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="goToPosition1" ObjectId="7e0f3cbc-2505-4cee-87b8-ff22d1de14ab">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">				 
+				  
+				   ActuatorOUT_OWV:=FALSE;				// This should be inherited from PLCopenXML-File GLD without FB	   
+				    
+				   // The structured Text implementation goes here  		  
+				  
+				  </xhtml>
+                </ST>
+              </body>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="goToPosition0" ObjectId="5d096768-87e9-432c-a3d7-7c3cf0d2a503">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">ActuatorOUT_OWV:=TRUE;
+</xhtml>
+                </ST>
+              </body>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>29d2c80c-b7d0-4ed9-8240-37cfc0024d0f</ObjectId>
+          </data>
+        </addData>
+	</pous>
+	<pou/>
+	<types/>
+	<project/>

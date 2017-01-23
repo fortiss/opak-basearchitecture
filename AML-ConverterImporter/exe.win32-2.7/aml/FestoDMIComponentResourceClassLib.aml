@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CAEXFile FileName="FestoDMIComponentResourceClassLib.aml" SchemaVersion="2.15" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AdditionalInformation AutomationMLVersion="2.0" />
+	<ExternalReference Path="remainder.aml" Alias="orig" />
+	<SystemUnitClassLib Name="FestoDMIComponentResourceClassLib">
+		<SystemUnitClass Name="FestoCylinderClass" RefBaseClassPath="OPAKDMIGenericResourceCategoriesLib/KinematicObjects/ActiveLinear">
+			<SystemUnitClass Name="SingleActing" RefBaseClassPath="FestoDMIComponentResourceClassLib/FestoCylinderClass/DoubleActing/ElectricCylinderClass">
+				<InternalElement Name="SpecificEndpoints" ID="ea40b8b0-cb95-49f1-8703-0aa3a3866b95">
+					<InternalElement Name="FunctionalEndpoints" ID="1f5afcfe-e807-4b0c-a778-743c2b7b8374" />
+				</InternalElement>
+				<InternalElement Name="InstanceOfGenericLinearDrive" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/KinematicObjects/ActiveLinear/GenericLinearDrive" ID="93ff7295-fc80-4d1a-9d31-297629cf090a">
+					<Attribute Name="Technology" AttributeDataType="xs:complexType">
+						<DefaultValue>unknown</DefaultValue>
+						<Value>pneumatic</Value>
+					</Attribute>
+					<Attribute Name="PathBoundaries" AttributeDataType="xs:string">
+						<Description>unknown; satzbetrieb; direkt</Description>
+					</Attribute>
+					<Attribute Name="OperationMode" AttributeDataType="xs:string">
+						<Description>unknown; festanschlag; signalanschlag; kein Anschlag</Description>
+					</Attribute>
+					<InternalElement Name="FunctionalEndpoint" ID="65f85d3d-9b03-481f-80f2-a09924adbb6e">
+						<InternalElement Name="SkillGoToPosition" ID="1d50e5a7-7abe-4422-8b15-afc832fd64fd" RefBaseSystemUnitPath="orig@OPAKDMIGenericSkillClassLib/___obsolete_Classification/BasicSkills/Mechatronic/SkillGoToPosition">
+							<ExternalInterface Name="VariableInterface" ID="db15f266-e918-4418-b16c-27776afa4ec7" />
+							<ExternalInterface Name="SkillInterface" ID="90fe8738-a693-4278-a36e-cf09be5977d1" />
+							<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKSkillRoleClass" />
+						</InternalElement>
+						<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/KinematicElement/ActiveLinearElement" />
+					</InternalElement>
+					<InternalElement Name="CommunicationEndpoint" ID="b8a062d5-b26e-442f-8cbb-6710099f6085">
+						<InternalElement Name="PhysicalEndpoint" ID="5cb9906c-a4e7-4ea5-b5e0-2638cd88b8ef">
+							<ExternalInterface Name="DigitalInputPort" RefBaseClassPath="orig@OPAKInterfaceClass/CommunicationInterfaceClass/PhysicalEndoint/DigitalInputPort" ID="f784a01a-2e92-403c-8560-63dd0d9d6cb3" />
+							<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/PhyscialDevices/PhysicalEndpointlist" />
+						</InternalElement>
+						<InternalElement Name="LogicalEndpoint" ID="ac960b7b-741f-4740-9775-5fa4f7090b78">
+							<ExternalInterface Name="LogicalEndpoint" RefBaseClassPath="orig@OPAKInterfaceClass/CommunicationInterfaceClass/LogicalEndpoint" ID="37f643da-09a7-4838-b6de-40e6dd7c16f3" />
+							<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/LogicalDevices/LogicalEndpoinlist" />
+						</InternalElement>
+						<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/PhyscialDevices" />
+						<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/LogicalDevices" />
+					</InternalElement>
+					<InternalElement Name="GeometryEndpoint" ID="2b7429de-f2b3-4311-960e-ac9066362505">
+						<InternalElement Name="Publishframe" ID="9edc2f23-aae4-47c1-8041-0ad363d609d3">
+							<ExternalInterface Name="FileInterface" RefBaseClassPath="orig@OPAKInterfaceClass/CADInterface" ID="7e14b74d-08bc-45f8-86f6-d31cad119d47">
+								<Attribute Name="refType" AttributeDataType="xs:string" />
+								<Attribute Name="target" AttributeDataType="xs:token" />
+							</ExternalInterface>
+							<ExternalInterface Name="InternalConnector" RefBaseClassPath="orig@OPAKInterfaceClass/PhysicalAttachment" ID="e8804ab7-622c-4453-ab45-697e1c456c3d" />
+							<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKGeometryRoleClass/FrameReference" />
+						</InternalElement>
+						<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKGeometryRoleClass" />
+					</InternalElement>
+					<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/KinematicElement/ActiveLinearElement" />
+					<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/KinematicElement" />
+				</InternalElement>
+				<SystemUnitClass Name="ElectricCylinderClass">
+					<Attribute Name="Attribute1" AttributeDataType="xs:string" />
+				</SystemUnitClass>
+				<SystemUnitClass Name="PneumaticCyliderClass" />
+			</SystemUnitClass>
+			<SystemUnitClass Name="DoubleActing" RefBaseClassPath="FestoDMIComponentResourceClassLib/FestoCylinderClass/DoubleActing/ElectricCylinderClass">
+				<SystemUnitClass Name="ElectricCylinderClass">
+					<Attribute Name="Attribute1" AttributeDataType="xs:string" />
+				</SystemUnitClass>
+				<SystemUnitClass Name="PneumaticCyliderClass" RefBaseClassPath="OPAKDMIGenericResourceCategoriesLib/KinematicObjects/ActiveLinear/GenericLinearDrive">
+					<InternalElement Name="GenericEndpoints" ID="639b9511-86ce-4035-bf1b-36eec23e4df1" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/KinematicObjects/ActiveLinear/GenericLinearDrive">
+						<InternalElement Name="FunctionalEndpoint" ID="0d405d74-304e-438b-a81e-6774b5dcf286">
+							<InternalElement Name="SkillGoToPosition" ID="1b7bf77a-63ae-4d51-a7b7-72fe4e0bec4e" RefBaseSystemUnitPath="orig@OPAKDMIGenericSkillClassLib/___obsolete_Classification/BasicSkills/Mechatronic/SkillGoToPosition">
+								<ExternalInterface Name="VariableInterface" ID="d376770c-11ce-467b-b62e-dfc390308964" />
+								<ExternalInterface Name="SkillInterface" ID="f8818f69-6156-49a2-8884-c343f1ba2cdf" />
+								<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKSkillRoleClass" />
+							</InternalElement>
+							<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/KinematicElement/ActiveLinearElement" />
+						</InternalElement>
+						<InternalElement Name="CommunicationEndpoint" ID="4514f76b-02b7-43c5-8a90-2a1c9d259c77">
+							<InternalElement Name="PhysicalEndpoint" ID="35524874-a0a8-45ed-9de2-4f8544e1a979">
+								<ExternalInterface Name="DigitalInputPort" RefBaseClassPath="orig@OPAKInterfaceClass/CommunicationInterfaceClass/PhysicalEndoint/DigitalInputPort" ID="e636d7f5-7da7-4540-b84a-76658fc25cd0" />
+								<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/PhyscialDevices/PhysicalEndpointlist" />
+							</InternalElement>
+							<InternalElement Name="LogicalEndpoint" ID="b07f0a32-b83b-44fa-a23e-4192e8ec7110">
+								<ExternalInterface Name="LogicalEndpoint" RefBaseClassPath="orig@OPAKInterfaceClass/CommunicationInterfaceClass/LogicalEndpoint" ID="04f6ae29-e5dd-4090-8636-baafa301d384" />
+								<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/LogicalDevices/LogicalEndpoinlist" />
+							</InternalElement>
+							<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/PhyscialDevices" />
+							<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/LogicalDevices" />
+						</InternalElement>
+						<InternalElement Name="GeometryEndpoint" ID="919710cd-4557-4a55-b3a5-e2add9f3cf74">
+							<InternalElement Name="Publishframe" ID="26613684-787f-4fd2-9ccf-1518c218432b">
+								<ExternalInterface Name="FileInterface" RefBaseClassPath="orig@OPAKInterfaceClass/CADInterface" ID="563f32ce-3736-489d-877d-afee739c8b95">
+									<Attribute Name="refType" AttributeDataType="xs:string" />
+									<Attribute Name="target" AttributeDataType="xs:token" />
+								</ExternalInterface>
+								<ExternalInterface Name="InternalConnector" RefBaseClassPath="orig@OPAKInterfaceClass/PhysicalAttachment" ID="fe251ae3-25ff-4986-9c70-35607604075b" />
+								<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKGeometryRoleClass/FrameReference" />
+							</InternalElement>
+							<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKGeometryRoleClass" />
+						</InternalElement>
+						<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/KinematicElement/ActiveLinearElement" />
+						<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/KinematicElement" />
+					</InternalElement>
+				</SystemUnitClass>
+			</SystemUnitClass>
+		</SystemUnitClass>
+		<SystemUnitClass Name="FestoGripperClass">
+			<SystemUnitClass Name="HGPL" RefBaseClassPath="FestoDMIComponentResourceClassLib/FestoGripperClass">
+				<Attribute Name="Modellnumber" AttributeDataType="xs:string">
+					<Value>sdafsfad</Value>
+				</Attribute>
+				<InternalElement Name="InstanceOfGenericGripper" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/HandlingObjects/GripperObject/GenericGripper" ID="1c51ce49-e711-4fca-9edc-bafc6c5afb89">
+					<Attribute Name="Technology" AttributeDataType="xs:string">
+						<Description>Refers to the type of technology used for providing te specific rle</Description>
+						<Attribute Name="Electric" AttributeDataType="xs:string">
+							<Value>0</Value>
+						</Attribute>
+						<Attribute Name="Pneumatic" AttributeDataType="xs:string">
+							<Value>1</Value>
+						</Attribute>
+						<Attribute Name="ServoPneumatic" AttributeDataType="xs:string">
+							<Value>2</Value>
+						</Attribute>
+						<Attribute Name="Unknown" AttributeDataType="xs:string" />
+					</Attribute>
+					<Attribute Name="GrippingMode" AttributeDataType="xs:string">
+						<Attribute Name="OpenClose" AttributeDataType="xs:string">
+							<Value>0</Value>
+						</Attribute>
+						<Attribute Name="IntermedietePosition" AttributeDataType="xs:string">
+							<Value>1</Value>
+						</Attribute>
+					</Attribute>
+					<InternalElement Name="StandardInterfaces" ID="83175b3a-7ef3-4a0a-a72d-524d7c62fd9b">
+						<InternalElement Name="ControlInterface" ID="47fea243-5d5e-41a1-998e-1d4682cd695a">
+							<InternalElement Name="SkillGrip" ID="241ecd15-d718-44b5-abeb-5f03209813e7" RefBaseSystemUnitPath="orig@OPAKDMIGenericSkillClassLib/___obsolete_Classification/BasicSkills/Mechatronic/SkillGrip">
+								<ExternalInterface Name="VariableInterface" ID="f466444a-6c65-4a63-b483-284642f3fb84" />
+								<ExternalInterface Name="SkillInterface" ID="6a9fdc2c-3899-4d5e-a66d-72067498652d" />
+								<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKSkillRoleClass" />
+							</InternalElement>
+							<InternalElement Name="SkillRelease" ID="0d1b86ee-a0af-4347-a486-de1b2bc29f50" RefBaseSystemUnitPath="orig@OPAKDMIGenericSkillClassLib/___obsolete_Classification/BasicSkills/Mechatronic/SkillRelease">
+								<ExternalInterface Name="VariableInterface" ID="47820453-c396-4673-951e-5c02c4e86bff" />
+								<ExternalInterface Name="SkillInterface" ID="4ec03173-7307-4ab8-9ba9-efa59cdfeb75" />
+								<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKSkillRoleClass" />
+							</InternalElement>
+							<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/HandlingElement/GrippingElement" />
+						</InternalElement>
+						<InternalElement Name="CommunicationInterface" ID="8d57433b-445c-410c-b89f-2176f3a108bd" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/HandlingObjects/GripperObject">
+							<InternalElement Name="PhysicalEndpoint" ID="b324af1d-f9ac-4824-b13a-883889ad0825">
+								<ExternalInterface Name="DigitalInputPort" RefBaseClassPath="orig@OPAKInterfaceClass/CommunicationInterfaceClass/PhysicalEndoint/DigitalInputPort" ID="40c6e4a6-8221-4480-8c02-4d856e95cf77" />
+								<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/PhyscialDevices/PhysicalEndpointlist" />
+							</InternalElement>
+							<InternalElement Name="LogicalEndpoint" ID="33944bf7-d6a9-43d7-b2ee-7c01980b19e1">
+								<ExternalInterface Name="LogicalEndpoint" RefBaseClassPath="orig@OPAKInterfaceClass/CommunicationInterfaceClass/LogicalEndpoint" ID="fd50cd89-74b3-4f06-966d-f0879641a7cb" />
+								<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/LogicalDevices/LogicalEndpoinlist" />
+							</InternalElement>
+							<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/PhyscialDevices" />
+							<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/LogicalDevices" />
+						</InternalElement>
+						<InternalElement Name="GeometryInterface" ID="54c5a1b6-a0b4-41f5-b8bb-749955db9f79" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/HandlingObjects/GripperObject">
+							<InternalElement Name="Publishframe" ID="713a2d20-62fd-40ea-8d7d-a9a14e2b861f">
+								<ExternalInterface Name="FileInterface" RefBaseClassPath="orig@OPAKInterfaceClass/CADInterface" ID="27a4013b-1762-42cf-9598-c65a74a5245b">
+									<Attribute Name="refType" AttributeDataType="xs:string" />
+									<Attribute Name="target" AttributeDataType="xs:token" />
+								</ExternalInterface>
+								<ExternalInterface Name="InternalConnector" RefBaseClassPath="orig@OPAKInterfaceClass/PhysicalAttachment" ID="8ced7339-ac67-4cdc-ad65-c26de2000478" />
+								<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKGeometryRoleClass/FrameReference" />
+							</InternalElement>
+							<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKGeometryRoleClass" />
+						</InternalElement>
+						<RoleRequirements RefBaseRoleClassPath="orig@AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					</InternalElement>
+					<InternalElement Name="Structure" ID="ab312330-9425-40b1-9a97-5c89b4e5d034">
+						<RoleRequirements RefBaseRoleClassPath="orig@AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure/ResourceStructure" />
+					</InternalElement>
+					<InternalElement Name="AdditionalInterfaces" ID="edfc0daa-a5eb-4bf5-a88e-5d8b03da9b40">
+						<RoleRequirements RefBaseRoleClassPath="orig@AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+					</InternalElement>
+					<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/HandlingElement/GrippingElement" />
+					<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/HandlingElement" />
+				</InternalElement>
+			</SystemUnitClass>
+			<SystemUnitClass Name="HGDT" RefBaseClassPath="FestoDMIComponentResourceClassLib/FestoGripperClass">
+				<InternalElement Name="ProximitySensor" ID="c4319b1f-7740-4464-8a4b-9e9ff607cb89" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/SensingObjects_V1/ProximitySensor">
+					<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/SensingElement/ProximityChecking" />
+				</InternalElement>
+				<InternalElement Name="GenericEndpoints" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/HandlingObjects/GripperObject/GenericGripper" ID="5fc50232-3ca9-4c78-9701-e18658bb36f3">
+					<Attribute Name="Technology" AttributeDataType="xs:string" />
+					<Attribute Name="Positioning" AttributeDataType="xs:string">
+						<Value>unknown; StartEnd; IntermediatePosition</Value>
+					</Attribute>
+					<Attribute AttributeDataType="xs:complexType" Name="Frame">
+						<Attribute Name="x" AttributeDataType="xs:double">
+							<Value>0.00</Value>
+						</Attribute>
+						<Attribute Name="y" AttributeDataType="xs:double">
+							<Value>0.00</Value>
+						</Attribute>
+						<Attribute Name="z" AttributeDataType="xs:double">
+							<Value>0.00</Value>
+						</Attribute>
+						<Attribute Name="rx" AttributeDataType="xs:double">
+							<Value>0.00</Value>
+						</Attribute>
+						<Attribute Name="ry" AttributeDataType="xs:double">
+							<Value>0.00</Value>
+						</Attribute>
+						<Attribute Name="rz" AttributeDataType="xs:double">
+							<Value>0.00</Value>
+						</Attribute>
+					</Attribute>
+					<Attribute Name="Type" AttributeDataType="xs:string" />
+					<Attribute Name="StandardDescription" AttributeDataType="xs:string" />
+					<InternalElement Name="FunctionalEndpoint" ID="279fd70b-75ef-4fcc-b5df-09dd3a133994">
+						<InternalElement Name="SkillGrip" ID="228fa3b8-8a65-4195-817f-a90185ccc0bb" RefBaseSystemUnitPath="orig@OPAKDMIGenericSkillClassLib/___obsolete_Classification/BasicSkills/Mechatronic/SkillGrip">
+							<ExternalInterface Name="VariableInterface" ID="0f7c83c5-357a-4f6b-9c3d-e8742bcdae65" />
+							<ExternalInterface Name="SkillInterface" ID="4177f244-7a33-4f38-8ef4-bd31b7fc3057" />
+							<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKSkillRoleClass" />
+						</InternalElement>
+						<InternalElement Name="SkillRelease" ID="9f5edc94-3614-4edd-9c8c-f5bbbf6b4378" RefBaseSystemUnitPath="orig@OPAKDMIGenericSkillClassLib/___obsolete_Classification/BasicSkills/Mechatronic/SkillRelease">
+							<ExternalInterface Name="VariableInterface" ID="85291415-ea36-4b31-9193-e94ee74058a3" />
+							<ExternalInterface Name="SkillInterface" ID="8d52a24b-1c1e-48bf-8cd5-5cdb76e0857f" />
+							<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKSkillRoleClass" />
+						</InternalElement>
+						<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/HandlingElement/GrippingElement" />
+					</InternalElement>
+					<InternalElement Name="CommunicationEndpoint" ID="d3ede445-39f9-49d9-9891-a9476e44880e" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/HandlingObjects/GripperObject">
+						<InternalElement Name="PhysicalEndpoint" ID="2fd3d977-1993-4ee0-85b0-b685c299a7a0">
+							<ExternalInterface Name="DigitalInputPort" RefBaseClassPath="orig@OPAKInterfaceClass/CommunicationInterfaceClass/PhysicalEndoint/DigitalInputPort" ID="064b6434-6279-4d60-988a-34f907d390a2" />
+							<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/PhyscialDevices/PhysicalEndpointlist" />
+						</InternalElement>
+						<InternalElement Name="LogicalEndpoint" ID="6d845f34-bdce-471b-be6c-5dc42ff2a84a">
+							<ExternalInterface Name="LogicalEndpoint" RefBaseClassPath="orig@OPAKInterfaceClass/CommunicationInterfaceClass/LogicalEndpoint" ID="e854cec6-cfbf-4474-a5da-25cfb73db3f4" />
+							<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/LogicalDevices/LogicalEndpoinlist" />
+						</InternalElement>
+						<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/PhyscialDevices" />
+						<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/LogicalDevices" />
+					</InternalElement>
+					<InternalElement Name="GeometryEndpoint" ID="9434a562-f145-4a2b-840f-14f31341b943" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/HandlingObjects/GripperObject">
+						<InternalElement Name="Publishframe" ID="84c378f5-1dd0-44a7-81b5-8857fb766e09">
+							<ExternalInterface Name="FileInterface" RefBaseClassPath="orig@OPAKInterfaceClass/CADInterface" ID="010ba1fc-8ea9-4526-b7be-9192d2c4e295">
+								<Attribute Name="refType" AttributeDataType="xs:string" />
+								<Attribute Name="target" AttributeDataType="xs:token" />
+							</ExternalInterface>
+							<ExternalInterface Name="InternalConnector" RefBaseClassPath="orig@OPAKInterfaceClass/PhysicalAttachment" ID="aefe3b3e-dc83-493b-b4b7-8ab70dbbf58a" />
+							<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKGeometryRoleClass/FrameReference" />
+						</InternalElement>
+						<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKGeometryRoleClass" />
+					</InternalElement>
+					<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/HandlingElement" />
+				</InternalElement>
+			</SystemUnitClass>
+			<SystemUnitClass Name="HGPT" RefBaseClassPath="FestoDMIComponentResourceClassLib/FestoGripperClass">
+				<InternalElement Name="GenericEndpoints" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/HandlingObjects/GripperObject" ID="dbf878f3-a809-49cc-9f49-b71ce3c5f706">
+					<Attribute AttributeDataType="xs:complexType" Name="Frame">
+						<Attribute Name="x" AttributeDataType="xs:double">
+							<Value>0.00</Value>
+						</Attribute>
+						<Attribute Name="y" AttributeDataType="xs:double">
+							<Value>0.00</Value>
+						</Attribute>
+						<Attribute Name="z" AttributeDataType="xs:double">
+							<Value>0.00</Value>
+						</Attribute>
+						<Attribute Name="rx" AttributeDataType="xs:double">
+							<Value>0.00</Value>
+						</Attribute>
+						<Attribute Name="ry" AttributeDataType="xs:double">
+							<Value>0.00</Value>
+						</Attribute>
+						<Attribute Name="rz" AttributeDataType="xs:double">
+							<Value>0.00</Value>
+						</Attribute>
+					</Attribute>
+					<Attribute Name="Type" AttributeDataType="xs:string" />
+					<Attribute Name="StandardDescription" AttributeDataType="xs:string" />
+					<InternalElement Name="FunctionalEndpoint" ID="6eb33279-129c-4b56-a285-fac5653e659d">
+						<InternalElement Name="SkillGrip" ID="03f6a381-2210-438a-8dfa-2006fbb89c78" RefBaseSystemUnitPath="orig@OPAKDMIGenericSkillClassLib/___obsolete_Classification/BasicSkills/Mechatronic/SkillGrip">
+							<ExternalInterface Name="VariableInterface" ID="2cdf3c45-4649-4a65-a5ff-54ec747603d4" />
+							<ExternalInterface Name="SkillInterface" ID="569f20c0-a92f-470d-a2e1-98b1dfcc1050" />
+							<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKSkillRoleClass" />
+						</InternalElement>
+						<InternalElement Name="SkillRelease" ID="7a189acb-0b08-42bb-930b-5fadb62fdd34" RefBaseSystemUnitPath="orig@OPAKDMIGenericSkillClassLib/___obsolete_Classification/BasicSkills/Mechatronic/SkillRelease">
+							<ExternalInterface Name="VariableInterface" ID="31fa00c5-6522-4c75-b149-056d7f1e99ea" />
+							<ExternalInterface Name="SkillInterface" ID="93acad64-3ef6-473b-90a1-cc72a6572f7b" />
+							<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKSkillRoleClass" />
+						</InternalElement>
+						<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/HandlingElement/GrippingElement" />
+					</InternalElement>
+					<InternalElement Name="CommunicationEndpoint" ID="fd5b3280-c310-49d6-8aef-7d733e996f81" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/HandlingObjects/GripperObject">
+						<InternalElement Name="PhysicalEndpoint" ID="61c4227b-7eaf-441d-9b2e-3a8f7444b10c">
+							<ExternalInterface Name="DigitalInputPort" RefBaseClassPath="orig@OPAKInterfaceClass/CommunicationInterfaceClass/PhysicalEndoint/DigitalInputPort" ID="c5e179e5-6ada-490f-89cc-0daf2808e6b5" />
+							<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/PhyscialDevices/PhysicalEndpointlist" />
+						</InternalElement>
+						<InternalElement Name="LogicalEndpoint" ID="d4e52ce5-f50f-47ee-8a42-a71ef26d1017">
+							<ExternalInterface Name="LogicalEndpoint" RefBaseClassPath="orig@OPAKInterfaceClass/CommunicationInterfaceClass/LogicalEndpoint" ID="92d3921f-4f7e-43e9-bdc9-12da7f9662d5" />
+							<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/LogicalDevices/LogicalEndpoinlist" />
+						</InternalElement>
+						<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/PhyscialDevices" />
+						<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKCommunicationRoleClassGeneral/LogicalDevices" />
+					</InternalElement>
+					<InternalElement Name="GeometryEndpoint" ID="5c03bbdb-fc86-4a85-842e-2c66b4dc681f" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/HandlingObjects/GripperObject">
+						<InternalElement Name="Publishframe" ID="098eef5b-697d-40d9-bb28-811d4085dd16">
+							<ExternalInterface Name="FileInterface" RefBaseClassPath="orig@OPAKInterfaceClass/CADInterface" ID="fda65dce-d03e-49bd-b14c-891cf2c8170c">
+								<Attribute Name="refType" AttributeDataType="xs:string" />
+								<Attribute Name="target" AttributeDataType="xs:token" />
+							</ExternalInterface>
+							<ExternalInterface Name="InternalConnector" RefBaseClassPath="orig@OPAKInterfaceClass/PhysicalAttachment" ID="804128b2-634d-4e77-ad12-bc63d05146ae" />
+							<RoleRequirements RefBaseRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKGeometryRoleClass/FrameReference" />
+						</InternalElement>
+						<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKGeometryRoleClass" />
+					</InternalElement>
+					<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/HandlingElement" />
+				</InternalElement>
+				<InternalElement Name="WeightSensor" ID="19c3e9d8-d67b-4f40-8e11-0c2a480d4bee" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/SensingObjects_V1/WeightSensor">
+					<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/SensingElement/WeightChecking" />
+				</InternalElement>
+				<InternalElement Name="DistanceMeasurement" ID="717ef9f3-073b-4364-93e9-fbd83884aa4b" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/SensingObjects_V1/PositionMeasurement">
+					<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/SensingElement/PositionMeasurement" />
+				</InternalElement>
+			</SystemUnitClass>
+			<SystemUnitClass Name="HGDS" RefBaseClassPath="FestoDMIComponentResourceClassLib/FestoGripperClass" />
+			<SystemUnitClass Name="HGPLINheritance" RefBaseClassPath="OPAKDMIGenericResourceCategoriesLib/HandlingObjects/GripperObject" />
+		</SystemUnitClass>
+		<SystemUnitClass Name="FestoValveClass">
+			<SystemUnitClass Name="OnOffValve" />
+		</SystemUnitClass>
+		<SystemUnitClass Name="FestoSensorClass">
+			<SystemUnitClass Name="FestoProximitySensors">
+				<SystemUnitClass Name="ProximitySensorInfrared" RefBaseClassPath="FestoDMIComponentResourceClassLib/FestoSensorClass/FestoProximitySensors">
+					<InternalElement Name="InstanceOfGenericProximitySensor" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/SensingObjects_V1/ProximitySensor/GenericProximitySensor" ID="96d96ffb-4bbf-47cb-9b8c-b648785929e0">
+						<InternalElement Name="Interfaces" ID="0f6f2daf-f57b-48eb-a69b-27b153e5eec0">
+							<InternalElement Name="ControlEndpoint" ID="d04d2b0b-bcfd-4ca4-8547-40561593c90b" />
+							<InternalElement Name="CommunicationEndpoint" ID="0c27daa1-8fd2-46e7-b37c-7f1b73922a94" />
+							<InternalElement Name="GeometryEndpoint" ID="9d27358f-561b-458f-bb93-d98e2663fb8b" />
+							<RoleRequirements RefBaseRoleClassPath="orig@AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+						</InternalElement>
+						<InternalElement Name="Structure" ID="9d004d2e-f563-464e-819f-f5a7074eaa94">
+							<RoleRequirements RefBaseRoleClassPath="orig@AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure/ResourceStructure" />
+						</InternalElement>
+						<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/SensingElement/ProximityChecking" />
+					</InternalElement>
+					<InternalElement Name="InfraredModule" ID="dfa8ceca-0e36-4011-b44f-06fa27204dcf" />
+				</SystemUnitClass>
+				<SystemUnitClass Name="ProximitySensorElectromagnetic" RefBaseClassPath="FestoDMIComponentResourceClassLib/FestoSensorClass/FestoProximitySensors">
+					<InternalElement Name="InstanceOfGenericProximitySensor" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/SensingObjects_V1/ProximitySensor/GenericProximitySensor" ID="8faa9dff-7354-4a3f-aeff-6e309b389da1">
+						<InternalElement Name="Interfaces" ID="f79b4025-5fee-46e9-87eb-bf714cb48737">
+							<InternalElement Name="ControlEndpoint" ID="fb3bc62c-3d0e-4fc2-9212-903102ecaa8a" />
+							<InternalElement Name="CommunicationEndpoint" ID="796f5974-40d1-441c-af4e-e290350b0f59" />
+							<InternalElement Name="GeometryEndpoint" ID="ef902f9a-4bea-41e2-9b62-9d6a26e59406" />
+							<RoleRequirements RefBaseRoleClassPath="orig@AutomationMLBaseRoleClassLib/AutomationMLBaseRole" />
+						</InternalElement>
+						<InternalElement Name="Structure" ID="06cfe45f-1554-41b6-aa16-f92b414bebac">
+							<RoleRequirements RefBaseRoleClassPath="orig@AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure/ResourceStructure" />
+						</InternalElement>
+						<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/SensingElement/ProximityChecking" />
+					</InternalElement>
+					<InternalElement Name="ElectromagneticModule" ID="3fe2a640-dc77-4f82-a8e1-8aa4ef98d3b4" />
+				</SystemUnitClass>
+			</SystemUnitClass>
+			<SystemUnitClass Name="FestoSBoxcamera">
+				<InternalElement Name="InstanceOfGenericCameraSystem" ID="482c40a9-3a28-4b84-8f76-910f4440d00a" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/SensingObjects_V2/GenericCameraSystem">
+					<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/SensingElement/ShapeChecking" />
+					<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/SensingElement/ProximityChecking" />
+					<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/SensingElement/ColourChecking" />
+					<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/SensingElement/OrientationMeasurement" />
+				</InternalElement>
+				<InternalElement Name="myPositionMeasurementModule" ID="1d91f628-3994-490a-a473-ca350ebef424">
+					<InternalElement Name="InstanceOfGenericPositionMeasurement" ID="e675aa37-df57-4c4e-b52a-1d6df1473c6a" RefBaseSystemUnitPath="orig@OPAKDMIGenericResourceCategoriesLib/SensingObjects_V2/GenericPositionMeasurement">
+						<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/SensingElement/PositionMeasurement" />
+					</InternalElement>
+				</InternalElement>
+				<InternalElement Name="mySizeSensingModule" ID="d73e4c1f-c43d-4f90-ae16-74286735b4d7">
+					<SupportedRoleClass RefRoleClassPath="orig@OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/SensingElement/SizeChecking" />
+				</InternalElement>
+			</SystemUnitClass>
+			<SystemUnitClass Name="FestoPositionSensor" />
+		</SystemUnitClass>
+		<SystemUnitClass Name="FestoControllerClass">
+			<SystemUnitClass Name="CECC" />
+		</SystemUnitClass>
+		<SystemUnitClass Name="FestoPicknPlaceSubstation" />
+		<SystemUnitClass Name="FestoGripper" RefBaseClassPath="OPAKDMIGenericResourceCategoriesLib/HandlingObjects/GripperObject" ChangeMode="delete">
+			<Revision>
+				<RevisionDate>2015-06-05T15:37:02.185903</RevisionDate>
+				<AuthorName>Please enter your name</AuthorName>
+			</Revision>
+		</SystemUnitClass>
+		<SystemUnitClass Name="FestoH-Portal">
+			<Description>eigtl. 2 ActiveLinearElements benötigt...</Description>
+			<SupportedRoleClass RefRoleClassPath="OPAKBaseRoleClassLibrary/OPAKDMIProductionResourcelRoleClassLib/FunctionalResourceRoleClassLib/KinematicElement/ActiveLinearElement" />
+		</SystemUnitClass>
+	</SystemUnitClassLib>
+</CAEXFile>

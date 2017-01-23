@@ -1,0 +1,4 @@
+Hello {{ name }}!
+ {% for item in l -%}
+     {{item}}{% if not loop.last %},{% endif %}
+{% endfor %}

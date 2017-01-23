@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<?--
+/*******************************************************************************
+ * Copyright (c) 2014,2017 fortiss GmbH.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Benjamin Brandenbourger (fortiss GmbH) - initial API and implementation and/or initial documentation
+ *    Milan Vathoopan (fortiss GmbH) - adaptations
+ *******************************************************************************/
+-->
+<project>
+  <fileHeader companyName="AutomationML" companyURL="http://www.automationml.org/" productName="newProductName" productVersion="0.1" productRelease="" creationDateTime="06.06.2016 09:41:33" contentDescription="" />
+  <contentHeader name="PLCopen" version="0.1beta" author="FORTISS\brandenbourger" modificationDateTime="06.06.2016 11:00:25">
+    <coordinateInfo>
+      <pageSize d4p1:x="" d4p1:y="" xmlns:d4p1="999" />
+      <fbd>
+        <scaling d5p1:x="" d5p1:y="" xmlns:d5p1="999" />
+      </fbd>
+      <ld>
+        <scaling d5p1:x="" d5p1:y="" xmlns:d5p1="999" />
+      </ld>
+      <sfc>
+        <scaling d5p1:x="" d5p1:y="" xmlns:d5p1="999" />
+      </sfc>
+    </coordinateInfo>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="newPOU_1" pouType="program">
+        <interface />
+        <actions />
+        <transitions>
+          <transition name="Skill_moveIn">
+            <body>
+              <ST>
+                <html>
+                  <div>IF (Endsensor1==TRUE AND Endsensor2==FALSE) THEN := TRUE ELSE := FALSE;</div>
+                </html>
+              </ST>
+            </body>
+          </transition>
+          <transition name="Skill_moveOut">
+            <body>
+              <ST>
+                <html>
+                  <div>IF (Endsensor1==FALSE AND Endsensor2==TRUE) THEN := TRUE ELSE := FALSE;</div>
+                </html>
+              </ST>
+            </body>
+          </transition>
+        </transitions>
+        <body>
+          <SFC>
+            <step name="Extended" localId="1" globalId="step1" height="10" width="25">
+              <position x="20" y="32" />
+              <connectionPointIn>
+                <connection refLocalId="5" />
+              </connectionPointIn>
+            </step>
+            <step name="Retracted" localId="2" globalId="step2" height="10" width="25">
+              <position x="90" y="32" />
+              <connectionPointIn>
+                <connection refLocalId="4" />
+              </connectionPointIn>
+            </step>
+            <transition localId="4" globalId="transition4" height="0" width="5">
+              <position x="30" y="60" />
+              <condition>
+                <reference name="Skill_moveIn" />
+              </condition>
+              <connectionPointIn>
+                <connection refLocalId="1" />
+              </connectionPointIn>
+            </transition>
+            <transition localId="5" globalId="transition5" height="0" width="5">
+              <position x="100" y="50" />
+              <condition>
+                <reference name="Skill_moveOut" />
+              </condition>
+              <connectionPointIn>
+                <connection refLocalId="2" />
+              </connectionPointIn>
+            </transition>
+          </SFC>
+          <FBD />
+        </body>
+        <instances>
+          <configurations />
+        </instances>
+      </pou>
+    </pous>
+  </types>
+</project>

@@ -1,0 +1,57 @@
+<project>
+  <fileHeader companyName="" creationDateTime="2015-06-22T16:46:11.7326471" productName="CODESYS" productVersion="CODESYS V3.5 SP7" />
+  <contentHeader author="OPAK" modificationDateTime="2015-06-02T07:04:52" name="AC_OPAK_COMPONENTS" organization="OPAK" version="1.0.0.0">
+    <Comment>OPAK Components</Comment>
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data handleUnknown="implementation" name="http://www.3s-software.com/plcopenxml/projectinformation">
+        <ProjectInformation>
+          <property name="Author" type="string">OPAK</property>
+          <property name="Company" type="string">OPAK</property>
+          <property name="DefaultNamespace" type="string">AC_OPAK_COMPONENTS</property>
+          <property name="Description" type="string">OPAK Components</property>
+          <property name="DocFormat" type="string">reStructuredText</property>
+          <property name="IsEndUserLibrary" type="boolean">false</property>
+          <property name="LibraryCategories" type="unknown" />
+          <property name="LibraryCategoryIds" type="unknown" />
+          <property name="Project" type="string">AC_OPAK_Components</property>
+          <property name="Released" type="boolean">false</property>
+          <property name="Title" type="string">AC_OPAK_COMPONENTS</property>
+          <property name="Version" type="version">1.0.0.0</property>
+          <property name="library-category-list" type="library-category-list">Application|Composer</property>
+        </ProjectInformation>
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous />
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data handleUnknown="implementation" name="http://www.3s-software.com/plcopenxml/interface">
+      <Interface ObjectId="396b23f1-443b-4828-a756-f624b195bc8e" name="IHeatingElement">
+        <Inheritance>
+
+        <Extends>ITemperatureElement</Extends>
+</Inheritance>
+        <addData />
+      </Interface>
+    </data>
+    <data handleUnknown="discard" name="http://www.3s-software.com/plcopenxml/projectstructure">
+
+    <ProjectStructure><Folder Name="Component"><Folder Name="Others"><Folder Name="TemperatureElement"><Folder Name="HeatingElement"><Object Name="IHeatingElement" ObjectId="396b23f1-443b-4828-a756-f624b195bc8e" /></Folder></Folder></Folder></Folder></ProjectStructure></data>
+  </addData>
+</project>

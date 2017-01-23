@@ -1,0 +1,1 @@
+AML-ConverterImporter.exe is a .Net-application for performing a model transformation of manufacturer-specific models from AutomationML into the CoDeSys-proprietary format.

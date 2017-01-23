@@ -1,0 +1,1 @@
+The symbols will be delivered, as soon as the contributor got the clearance.

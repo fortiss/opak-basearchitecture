@@ -1,0 +1,1 @@
+"AML-ComponentGenerator.exe" is a .Net-application for creating manufacturer-specific models of automation components in AutomationML based on the metamodel.
